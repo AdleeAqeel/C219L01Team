@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shape Transitions</title>
+
+    <style>
+        body {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Circle to Triangle Animation DIYA */
+        .circle-triangle {
+            border-style: solid;
+            border-color: transparent transparent blue;
+            display: block;
+            border-width: 0 0 100px;
+            height: 0;
+            width: 100px;
+            border-radius: 50px;
+            transition-property: width, background-color, transform, border-width, border-color, border-radius;
+            transition-duration: 1s;
+        }
+
+        .circle-triangle:hover {
+            width: 0;
+            height: 0;
+            transform: translateY(6.7px);
+            border-width: 0 50px 86.6px;
+            border-color: transparent transparent red;
+            border-radius: 0;
+        }
+
+        /* Square to Triangle Transition */
+        .square-diamond {
+            width: 70px;
+            height: 70px;
+            background-color: green;
+            border-radius: 0%;
+            transition: width 2s, height 2s, transform 2s, background 2s;
+        }
+
+        .square-diamond:hover {
+            width: 400px;
+            height: 400px;
+            transform: rotate(315deg);
+            background: aquamarine;
+        }
+
+        /* Teamwork Assignment Page */
+        .gradient-square {
+            height: 200px;
+            width: 200px;
+            background: linear-gradient(to left, #FFC7EA, #D8B4F8, #CAEDFF);
+            transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .gradient-square:hover {
+            background: linear-gradient(to left, #CAEDFF, #D8B4F8, #FFC7EA);
+            transform: skew(20deg);
+            box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.7);
+
+
+
+        }
+
+
+        .rectangle-trapezium{
+            height: 60px;
+            width: 140px;
+            background-color: rgb(193, 20, 101);
+            border: none;
+            border-radius: 6px;
+            box-shadow: 5px 5px 12px #888888;
+ 
+            transition: width 4s, height 4s, transform 4s, linear 1s;
+        }
+ 
+        .rectangle-trapezium:hover{
+            border-bottom: 100px solid transparent;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            height: 0;
+            width: 200px;
+            background-color: rgb(59, 59, 203);
+            transform:  perspective(100px) rotateX(-10deg) translate(50px, 20px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="circle-triangle">
+        <p>Diya</p>
+    </div>
+    <div class="square-diamond">
+        <p>Aqeel</p>
+    </div>
+    <div class="gradient-square">
+        <p>Jolene</p>
+    </div>
+    <div class="rectangle-trapezium">
+        <p>Ian</p>
+    </div>
+</body>
+
+</html>
